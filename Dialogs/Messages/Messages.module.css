@@ -1,0 +1,29 @@
+.dialogs{
+    padding: 2em;
+    background-color: brown;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    border-right: 5px solid white;
+    border-top: 5px solid white;
+}
+.dialogs div{
+    margin-top: 2em;
+    text-align: end;
+}
+textarea{
+    width: 100%;
+    margin-top: 5em;
+}
+.dialogs .printingIcon{
+    margin-top: 0.2em;
+    color: black;
+    width: 3em;
+    animation: printing 1s ease-in-out infinite;
+}
+@keyframes printing{
+    0%{opacity: 0.5;}
+    50%{opacity: 1;
+        transform: scale(1.1);}
+    100%{opacity: 0.5;}
+}

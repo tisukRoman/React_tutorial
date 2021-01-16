@@ -1,0 +1,11 @@
+header{
+    grid-area: h;
+    background-color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  h1{
+    text-align: center;
+    line-height: 3em;
+  }
+  
+  

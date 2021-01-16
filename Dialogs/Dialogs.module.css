@@ -1,0 +1,14 @@
+.dialogs_page{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogs_names{
+    font-size: 1.5rem;
+}
+.dialogs_names ul{
+    list-style-type: none;
+}
+.dialogs_names ul li{
+    margin-top: 2em;
+    font-weight: bold;
+}

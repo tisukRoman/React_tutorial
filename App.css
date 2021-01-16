@@ -1,0 +1,21 @@
+:root{
+  font-size: 1em;
+}
+
+body{
+  background-color: black;
+}
+
+.app_wrapper{
+  max-width: 1024px;
+  min-height:100vh;
+  background-color: black;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 8em 1fr;
+  grid-gap: 1em;
+  grid-template-areas: "h h" "a m";
+}
+
+

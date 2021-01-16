@@ -1,0 +1,6 @@
+.content{
+    background-color:white;
+    min-height: 100vh;
+    grid-area: m;
+    overflow: hidden;
+}
