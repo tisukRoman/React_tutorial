@@ -1,6 +1,6 @@
 .dialogs{
     padding: 2em;
-    background-color: brown;
+    background-color: black;
     min-height: 100vh;
     color: white;
     position: relative;
@@ -16,8 +16,7 @@ textarea{
     margin-top: 5em;
 }
 .dialogs .printingIcon{
-    margin-top: 0.2em;
-    color: black;
+    color: yellow;
     width: 3em;
     animation: printing 1s ease-in-out infinite;
 }

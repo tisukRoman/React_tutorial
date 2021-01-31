@@ -5,10 +5,11 @@ import s from './App.module.css';
 import Header from './Header/Header';
 import Aside from './Aside/Aside';
 import Profile from './Profile/Profile';
-import Dialogs from './Dialogs/Dialogs';
+import DialogsContainer from './Dialogs/DialogsContainer';
 
 
 function App(props) {
+  console.log(props.state);
   return (
     <BrowserRouter>
       <div className="app_wrapper">
@@ -17,8 +18,8 @@ function App(props) {
       <Aside />
 
       <div className={s.content}>
-        <Route path="/profile" render={() => <Profile postData={props.state.postData}/>}/>
-        <Route path="/dialogs" render={() => <Dialogs dispatch={props.dispatch} state={props.state}/>} />
+        <Route path="/profile" render={() => <Profile postData={props.state.postDataReducer.postData}/>}/>
+        <Route path="/dialogs" render={() => <DialogsContainer dispatch={props.dispatch} state={props.state}/>} />
       </div>
 
       </div>

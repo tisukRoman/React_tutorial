@@ -4,7 +4,7 @@ import s from './Aside.module.css';
 
 const Aside = ()=>{
     return(
-        <aside>
+      <aside>
         <nav>
           <ul>
             <li><NavLink to="/profile" activeClassName={s.active}>Profile</NavLink></li>

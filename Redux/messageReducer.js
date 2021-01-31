@@ -1,7 +1,19 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
 const MESSAGE_TEXT_CHANGING = 'MESSAGE-TEXT-CHANGING';
 
-const messageReducer = (state, action) =>{
+let initialState = {
+    messageData: 
+            [
+                {id:1, text: "Hi"},
+                {id:2, text: "How are you?"},
+                {id:3, text: "Fiiinee"},
+                {id:4, text: ")))"},
+                {id:5, text: "Bye bye"},
+            ],
+    currentMessageText: "", 
+};
+
+const messageReducer = (state = initialState, action) =>{
     switch(action.type){
         case ADD_MESSAGE:  {/*type, messageText*/}
             let newMessage = {id:6, text: action.messageText};

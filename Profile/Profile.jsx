@@ -4,7 +4,8 @@ import s from './Profile.module.css';
 
 
 const Profile = (props) =>{
-  let posts = props.postData.map(p => (<Post userName={p.userName} comment={p.comment} imgURL={p.imgURL}/>));
+console.log(props);
+  let posts = props.postData.map((p) => (<Post userName={p.userName} comment={p.comment} imgURL={p.imgURL}/>));
     return(
       <main>
         <div className={s.wall}>
@@ -22,9 +23,9 @@ const Profile = (props) =>{
           </div>
         </div>
 
-        { posts } {/* тут высвечиваются посты, принятые из postData*/} 
+        { posts }; {/* тут высвечиваются посты, принятые из postData*/} 
 
       </main>
-    )
+    );
 }
 export default Profile;
