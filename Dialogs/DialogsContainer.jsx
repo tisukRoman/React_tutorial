@@ -1,12 +1,26 @@
 import React from 'react';
 import Dialogs from './Dialogs';
+import { connect } from 'react-redux';
+import { withAuthRedirect } from '../HOC/withAuthRedirect';
+import { compose } from 'redux';
 
-const DialogsContainer = (props) =>{
-
-    let contactData = props.state.contactDataReducer.contactData;
-
-    return(
-        <Dialogs contactData={contactData} dispatch={props.dispatch} state={props.state}/>
-    )
+class DialogsC extends React.Component {
+    render() {
+        return <Dialogs contactData={this.props.contactData} />
+    }
 }
-export default DialogsContainer;
+
+////////////////////////////////////////////////////////////////////
+
+let mapStateToProps = (state) => {
+    return {
+        contactData: state.contactDataReducer.contactData,
+    }
+}
+
+export default compose(      //DialogsContainer
+    connect(mapStateToProps),
+    withAuthRedirect
+)(DialogsC);
+
+

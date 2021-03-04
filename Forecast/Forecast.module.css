@@ -1,0 +1,16 @@
+.item{
+    display: flex;
+    margin: 2em;
+    border: 3px double gold;
+}
+.img{
+    max-width: 60%;
+    max-height: 60%;
+}
+.media{
+    margin-left: 2em;
+    font-style: italic;
+}
+.inst{
+    margin-top: 2em;
+}

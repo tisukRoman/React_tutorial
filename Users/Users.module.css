@@ -1,0 +1,71 @@
+.post_wrapper{
+    width: 100%;
+    height: 8em;
+    display: flex;
+    padding: 2em;
+}
+.media{
+    display: flex;
+    flex-direction: column;
+    margin-left:2em;
+    width:60%;
+}
+.media .flex span{
+    font-size: 1.5rem;
+    width: 60%;
+    color: black;
+}
+.media .status{
+    padding: 0.5em;
+    background-color: white;
+    height: 5em;
+    border: 3px solid black;
+}
+.img{
+    height: 8em;
+    overflow: hidden;
+    width: 5em;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.buttonT{
+    width:20%;
+    background-color: aquamarine;
+}
+.buttonF{
+    width:20%;
+    background-color: grey;
+}
+.flex{
+    display: flex;
+}
+.flex span{
+    margin-right: 1em;
+}
+.flex :nth-child(1){
+    margin-right: 50%;
+}
+.pageNav{
+    width:5em;
+    height: 2em;
+    background-color:black;
+    border: 1px solid white;
+    margin: 0 auto;
+}
+.pageDigs{
+    color: white;
+    padding: 0.5em;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.pageDigsSelected{
+    color: yellow;
+    padding: 0.5em;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+

@@ -2,25 +2,30 @@ import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import s from './App.module.css';
-import Header from './Header/Header';
 import Aside from './Aside/Aside';
-import Profile from './Profile/Profile';
+import ProfileContainer from './Profile/ProfileContainer';
 import DialogsContainer from './Dialogs/DialogsContainer';
-
+import UsersContainer from './Users/UsersContainer';
+import HeaderContainer from './Header/HeaderContainer';
+import {ForecastCont} from './Forecast/Forecast';
+import Login from './Login/Login';
 
 function App(props) {
-  console.log(props.state);
+
   return (
     <BrowserRouter>
       <div className="app_wrapper">
 
-      <Header />
-      <Aside />
+        <HeaderContainer />
+        <Aside />
 
-      <div className={s.content}>
-        <Route path="/profile" render={() => <Profile postData={props.state.postDataReducer.postData}/>}/>
-        <Route path="/dialogs" render={() => <DialogsContainer dispatch={props.dispatch} state={props.state}/>} />
-      </div>
+        <div className={s.content}>
+          <Route path="/profile/:userId?" render={() => <ProfileContainer/>}/> 
+          <Route path="/dialogs" render={() => <DialogsContainer/>} />
+          <Route path="/users" render={() => <UsersContainer/>} />
+          <Route path="/forecast" render={() => <ForecastCont/>} />
+          <Route path="/login" render={() => <Login/>} />
+        </div>
 
       </div>
     </BrowserRouter>

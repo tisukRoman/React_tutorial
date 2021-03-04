@@ -1,10 +1,11 @@
 import React from 'react';
-import './Header.module.css';
+import { NavLink } from 'react-router-dom';
+import s from './Header.module.css';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
-            <h1> Welcome to my Social Network</h1>
+            {props.isAuthorized?(<div className={s.login}>{props.login}</div>):(<NavLink className={s.link} to='/login'>LOGIN</NavLink>)}
         </header>
     )
 } 

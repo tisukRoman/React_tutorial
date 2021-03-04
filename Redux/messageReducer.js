@@ -11,21 +11,24 @@ let initialState = {
                 {id:5, text: "Bye bye"},
             ],
     currentMessageText: "", 
-};
+}
 
 const messageReducer = (state = initialState, action) =>{
     switch(action.type){
-        case ADD_MESSAGE:  {/*type, messageText*/}
-            let newMessage = {id:6, text: action.messageText};
-            state.messageData.push(newMessage);
-            state.currentMessageText = '';
-            return state;
-        case MESSAGE_TEXT_CHANGING:  {/*type, text*/}
-            state.currentMessageText = action.text;
-            return state;
-        default: 
-            return state;
-    }
+        case ADD_MESSAGE: 
+            return {
+                ...state,
+                messageData: [...state.messageData, {id:6, text: action.messageText}],
+                currentMessageText: ''
+            }
+        case MESSAGE_TEXT_CHANGING: 
+            return{
+                ...state,
+                currentMessageText: action.text
+            }
+            default: 
+                return state;
+            }
 }
 
 export const addMessage_AC = (messageText) =>{
@@ -33,12 +36,12 @@ export const addMessage_AC = (messageText) =>{
         type: ADD_MESSAGE,
         messageText: messageText
     }
-};
+}
 export const messagetextChanging_AC = (text) =>{
     return {
         type: MESSAGE_TEXT_CHANGING,
         text: text
     }
-};
+}
 
 export default messageReducer;

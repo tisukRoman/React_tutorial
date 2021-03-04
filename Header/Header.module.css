@@ -1,11 +1,18 @@
-header{
+header {
     grid-area: h;
     background-color: blue;
     font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  h1{
+}
+
+.link {
+    float: right;
+    color: aliceblue;
+    margin: 2em;
+    font-size: x-large;
+}
+
+.login {
     text-align: center;
-    line-height: 3em;
-  }
-  
-  
+    font-size: xx-large;
+    margin-top: 2em;
+}

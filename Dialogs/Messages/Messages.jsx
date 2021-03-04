@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Messages.module.css";
 
 const Messages = (props) =>{
-
+    console.log(props)
     let newMessage = React.createRef();
 
     let OnMessageChange =()=>{
